@@ -1,0 +1,57 @@
+
+CHAP 2:
+	PEAS : Performance, Environment, Actuators (Effecteurs), Sensors (Capteurs)
+	
+	Propriétés des environnements de tâches :
+		Observabilité : entière vs partielle ( capteurs donnent accès à la totalité de l'état)
+		Déterministe vs stochastique : si l'état suivant est complètement déterminé par l'état courant + action de l'agent
+		Episodique vs séquentiel : le choix de l'action de chaque épisode dépend uniquement de l'épisode lui même
+		Statique vs dynamique : environnement change pendant délibération
+		Discret vs continu
+		Mono-agent vs Multi-agent
+		
+	Type d'agent :
+		Agent réflexe simple
+			Utilisation du seul percept courant pour déterminer l'action à entreprendre
+			Règle condition-action
+			Env : entièrement observable
+			
+		Agent fondé sur des modèles ( ou agent réflexe états )
+			Garde un état du monde en mémoire, et utilise donc les percepts passés
+			Env : partiellement observable
+	
+		Agent fondé sur des buts
+			Choix en fonction du but ( exploration & planification futur)
+			Suppresion des règles conditions-actions : avant modification de destination => modification de toutes les règles
+	
+		Agent utile
+			but : passe de l'état insatisfait à satisfait
+			utile choisi parmi les états satisfaisants pour maximiser la mesure de performance 
+		
+	+Apprentissage
+
+CHAP3:
+
+	Agent fondé sur les buts par exploration : statique, observable, déterministe
+		Recherche non informé dans des arbres
+			Largeur d'abord (BFS)
+			A coût uniforme (UCS)
+			Profondeur d'abord (DFS)
+			Profondeur limité (DLS)
+			Profondeur itérative 
+			Bidirectionnel
+			voir figure 3.17 pour complexité
+		+ Graphe ( Eviter répétitions d'état)
+			
+	
+	Exemple sur Taquin :
+		Arbres:
+			Largeur -> optimale limité à ~ 10 profondeur
+			Profondeur -> rapidité limité à ~ <18
+		Graphe:
+			BFS : 18-22
+			Bidirectionnel par largeur -> 40 pf
+	
+	
+	
+	
